@@ -19,6 +19,7 @@ return new class extends Migration
             $table->timestamps();
 
             // more data types
+            //date, dateTime, time, decimal, double, float, interger,
         });
     }
 
