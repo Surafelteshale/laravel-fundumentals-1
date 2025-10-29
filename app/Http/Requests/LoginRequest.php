@@ -11,7 +11,7 @@ class LoginRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -25,6 +25,15 @@ class LoginRequest extends FormRequest
             'name' => ['required', 'alpha', 'min:6'],
             'email' => ['required', 'email'],
             'password' => 'required'
+        ];
+    }
+
+    public function messages(){
+        return [
+            'name.required' => 'The User name field is empty',
+            'name.alpha' => 'User name have to contain only letters',
+            'email' => 'The email isnt email',
+
         ];
     }
 }
