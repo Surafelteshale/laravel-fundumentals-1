@@ -14,7 +14,7 @@ class HomeController extends Controller
         // return DB::table('posts')->find(1);
         // return DB::table('posts')->first();
         // return DB::table('posts')->pluck('title', 'id');
-        // return DB::table('posts')->where('id', '>=', 0)->where('id', '<', '1')->get();
+        // return DB::table('posts')->where('id', '>=' , 0)->where('id', '<', '1')->get();
 
         // create
         // DB::table('posts')->insert([
@@ -27,11 +27,24 @@ class HomeController extends Controller
         // dd('success');
 
         // update
-        return DB::table('posts')->where('id', 3)->update([
-            'title' => 'we updated the title',
-            'description' => 'this is the updated description'
-        ]);
+        // return DB::table('posts')->where('id', 3)->update([
+        //     'title' => 'we updated the title',
+        //     'description' => 'this is the updated description'
+        // ]);
 
+        // delete
+        // return DB::table('posts')->where('id', 3)->delete();
+        // return DB::table('posts')->delete(3);
+
+        // join
+        // return DB::table('posts')->join('status', 'posts.status_id', '=', 'status.id')
+        // ->select('posts.*')->get();
+
+        //count
+        // return DB::table('posts')->count();
+
+        //max and min
+        return DB::table('posts')->count();
 
         // return view('home', compact(('blogs')));
     }
