@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Post;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -44,8 +45,19 @@ class HomeController extends Controller
         // return DB::table('posts')->count();
 
         //sum, average, max and min
-        return DB::table('posts')->avg('view');
+        // return DB::table('posts')->avg('view');
 
         // return view('home', compact(('blogs')));
+
+
+        // ORM
+        // return $posts = Post::all();
+        // return $title = Post::findorfail(10);
+        $posts = Post::all();
+
+        foreach ($posts as $name) {
+            echo $name->title;
+        }
+
     }
 }
