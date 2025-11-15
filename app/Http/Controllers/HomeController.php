@@ -43,8 +43,8 @@ class HomeController extends Controller
         //count
         // return DB::table('posts')->count();
 
-        //max and min
-        return DB::table('posts')->count();
+        //sum, average, max and min
+        return DB::table('posts')->avg('view');
 
         // return view('home', compact(('blogs')));
     }
