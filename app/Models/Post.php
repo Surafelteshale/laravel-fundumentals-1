@@ -16,7 +16,6 @@ class Post extends Model
         'status',
         'publish_date',
         'user_id',
-        'status_id',
         'view',
     ];
 
