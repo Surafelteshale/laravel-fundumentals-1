@@ -53,11 +53,62 @@ class HomeController extends Controller
         // ORM
         // return $posts = Post::all();
         // return $title = Post::findorfail(10);
-        $posts = Post::all();
+        // $posts = Post::all();
 
-        foreach ($posts as $name) {
-            echo $name->title;
-        }
+        // foreach ($posts as $name) {
+        //     echo $name->title;
+        // }
+
+        // orwhere
+        // return Post::where('view', '>', 100)->orWhere('id', '=', 1)->get();
+
+        // inserting data using orm
+        // $post = new Post();
+        // $post->title = 'post 4';
+        // $post->description = 'dhsjfklh jdklsahf jsdfhkl usafd jdskla hjkfdsa';
+        // $post->status = 1;
+        // $post->publish_date = date('y-m-d');
+        // $post->user_id = 1;
+        // $post->status_id = 1;
+        // $post->view = 165;
+
+        // $post->save();
+        // dd('success');
+
+        // updating data using orm
+        // $post = Post::find(2);
+        // $post->title = 'post 3482';
+        // $post->save();
+        // dd('success');
+
+        // delete data using orm
+        // $post = Post::findOrFail(4)->delete();
+        // dd('success');
+
+        // mass assignment
+        // $post = Post::create([
+        //     'title' => 'post 4',
+        //     'description' => 'dhsjfklh jdklsahf jsdfhkl usafd jdskla hjkfdsa',
+        //     'status' => 1,
+        //     'publish_date' => date('y-m-d'),
+        //     'user_id' => 1,
+        //     'status_id' => 1,
+        //     'view' => 165,
+        // ]);
+
+        // update
+        // $post = Post::find(1)->update([
+        //     'title' => 'the data has been updated',
+        //     'description' => 'abebe beso libela nber'
+        // ]);
+
+        //update multiple rows at once
+        // $post = Post::where('status', 1)->update([
+        //     'status' => '0',
+        // ]);
+
+        // dd('success');
+
 
     }
 }
