@@ -114,7 +114,11 @@ class HomeController extends Controller
         // dd('success');
 
         //fetching trashed data
-        return Post::onlyTrashed()->get();
+        // return Post::onlyTrashed()->get();
+        // return Post::all();
+        // Post::withTrashed()->find(5)->restore();
+        // Post::withTrashed()->find(5)->forceDelete();
+        // dd('success');
 
     }
 }
