@@ -109,6 +109,12 @@ class HomeController extends Controller
 
         // dd('success');
 
+        // delete data using softdelets
+        // $post = Post::find(5)->delete();
+        // dd('success');
+
+        //fetching trashed data
+        return Post::onlyTrashed()->get();
 
     }
 }
