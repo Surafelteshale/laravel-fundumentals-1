@@ -22,4 +22,8 @@ class Post extends Model
     // protected $guarded = [
     //      'title',
     // ];
+
+    public function tags(){
+        return $this->belongsToMany(Tag::class, 'post_tag');
+    }
 }

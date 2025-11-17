@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Post;
+use App\Models\Tag;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -119,6 +120,11 @@ class HomeController extends Controller
         // Post::withTrashed()->find(5)->restore();
         // Post::withTrashed()->find(5)->forceDelete();
         // dd('success');
+
+        // many to many relationship
+        $post = Post::first();
+        $tag = Tag::first();
+        $post->tags()->attach($tag);
 
     }
 }
